@@ -18,10 +18,8 @@ fs.writeFile('test-command-file.txt', 'This is a test file', function(err) {
 };
 
 module.exports.mkdir = () => {
-  fs.mkdir('./terminal-command/newfolder', function(err) {
-    if(err){
-      console.log('error');
-    }
+  fs.mkdir('newCommandFolder', function(err) {
+    if(err) throw err;
     console.log('Directory created successfully');
   });
 };
